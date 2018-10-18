@@ -1,29 +1,6 @@
 {{!< default}}
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
-<div id="popup" style="
-    height: 100%;
-    width: 100%;
-    background: #0000006b;
-    position: fixed;
-    top: 0;
-    z-index: 998;
-">
-    </div>
-<div id="informer" style="
-    height: 4em;
-    width: 4em;
-    float: left;
-    background: #006cff;
-    border-radius: 2em;
-    position: fixed;
-    bottom: 1em;
-    z-index: 999;
-    /* box-shadow: 0px 2px 7px black; */
-    right: 1em;
-">
-    <div style="color: white;width: 100%;display: flex;height: 100%;justify-content: center;align-items: center;">•••</div>
-</div>
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
 <header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
@@ -45,6 +22,7 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner">
+
         <div class="post-feed">
             {{#foreach posts}}
 
